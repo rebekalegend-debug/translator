@@ -183,5 +183,13 @@ client.once("ready", () => {
 });
 
 client.login(TOKEN);
+import express from "express";
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.get("/", (req, res) => res.send("OK"));
+app.listen(PORT, () => console.log(`[INFO] Web ping on port ${PORT}`));
 
 // EOF
+
