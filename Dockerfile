@@ -1,3 +1,7 @@
 FROM libretranslate/libretranslate:latest
 
-CMD ["--host", "0.0.0.0", "--port", "3000", "--disable-web-ui"]
+ENV LT_HOST=0.0.0.0
+ENV LT_PORT=8080
+ENV LT_DISABLE_WEB_UI=true
+
+EXPOSE 8080
